@@ -11,11 +11,11 @@ export default function Home() {
             <Navbar />
             <Container />
             <Aboutme />
-            <div className="flex items-center justify-center min-h-screen px-4 text-white md:px-8">
+            <div className="flex items-center justify-center min-h-screen text-white px-4 md:px-8">
                 <div className="w-full max-w-5xl">
-                    <div className="flex flex-col items-start justify-between gap-2 mb-8 md:flex-row md:items-center">
+                    <div className="flex flex-col items-start justify-between gap-2 md:flex-row md:items-center mb-8">
                         <h4 className="text-lg md:text-xl font-light text-[#fdf500] font-['Atmospheric']">{"// RECENT PROJECTS"}</h4>
-                        <h5 className="text-xs text-gray-300 md:text-sm">{"// LOAD_PROJECTS_ABSOLUTE_273"}</h5>
+                        <h5 className="text-xs md:text-sm text-gray-300">{"// LOAD_PROJECTS_ABSOLUTE_273"}</h5>
                     </div>
                     <div className="flex flex-col gap-6 md:gap-8 md:flex-row">
                         <figure className="flex flex-col w-full md:w-1/2">
@@ -43,7 +43,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="flex items-center justify-center px-4 text-white md:px-8">
+            <div className="flex items-center justify-center text-white px-4 md:px-8">
                 <div className="grid items-center w-full max-w-5xl">
                     <div className="flex flex-col items-center md:items-start">
                         <h4 className="mb-6 text-lg md:text-xl font-light mt-12 text-[#fdf500] font-['Atmospheric']">{"// MY SKILLS"}</h4>
@@ -77,7 +77,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="flex items-center justify-center px-4 mb-6 text-white md:px-8">
+            <div className="flex items-center justify-center mb-6 text-white px-4 md:px-8">
                 <div className="grid items-center w-full max-w-5xl">
                     <div className="flex flex-col items-center md:items-start">
                         <h4 className="mb-6 text-sm md:text-md font-light mt-12 text-[#fdf500] font-['Atmospheric']">{"/// SUPPORT SKILLS"}</h4>
