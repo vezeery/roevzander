@@ -15,7 +15,7 @@ export default function Home() {
             <div className="flex items-center justify-center min-h-screen text-white md:px-8">
                 <div className="w-full max-w-5xl">
                     <div className="flex items-center justify-between">
-                        <h4 className="mb-4 text-xl font-light mt-12 text-[#fdf500] font-['Atmospheric']">// RECENT PROJECTS</h4>
+                        <h4 className="mb-4 text-xl font-light mt-12 text-[#fdf500] font-atmospheric">// RECENT PROJECTS</h4>
                         <h5 className="mt-12 text-sm text-gray-300">// LOAD_PROJECTS_ABSOLUTE_273</h5>
                     </div>
                     <div className="flex flex-col gap-8 md:flex-row">
@@ -45,11 +45,11 @@ export default function Home() {
             <div className="flex items-center justify-center text-white md:px-8">
                 <div className="grid items-center w-full max-w-5xl">
                     <div className="flex flex-col items-center md:items-start">
-                        <h4 className="mb-4 text-xl font-light mt-12 text-[#fdf500] font-['Atmospheric']">// MY SKILLS</h4>
+                        <h4 className="mb-4 text-xl font-light mt-12 text-[#fdf500] font-atmospheric">// MY SKILLS</h4>
                         <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
                             <div className="w-full overflow-hidden transition-all border rounded-lg cursor-pointer bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow">
                                 <Image
-                                    src="/picture/uiuximage.png"
+                                    src="roevzander/picture/uiuximage.png"
                                     width={1080}
                                     height={1080}
                                     className="object-cover w-full h-auto"
@@ -80,7 +80,7 @@ export default function Home() {
             <div className="flex items-center justify-center text-white md:px-8">
                 <div className="grid items-center w-full max-w-5xl">
                     <div className="flex flex-col items-center md:items-start">
-                        <h4 className="mb-4 text-md font-light mt-12 text-[#fdf500] font-['Atmospheric']">/// SUPPORT SKILLS</h4>
+                        <h4 className="mb-4 text-md font-light mt-12 text-[#fdf500] font-atmospheric">/// SUPPORT SKILLS</h4>
                         <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
                             <div className="w-full overflow-hidden transition-all border rounded-lg cursor-pointer bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow">
                                 <div className="p-6">
