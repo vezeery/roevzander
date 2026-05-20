@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -17,5 +15,193 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Atmospheric", sans-serif;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: #00ff9d;
+}
+
+.card {
+  background-color: rgba(10, 10, 15, 0.8);
+  border: 1px solid rgba(0, 255, 157, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  border-color: rgba(0, 255, 157, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+
+.card-yellow {
+  background-color: #0a0a0a;
+  border: 1px solid #B6AF00;
+  backdrop-filter: blur(10px);
+}
+
+.card-yellow:hover {
+  border-color: #fdf500;
+  box-shadow: 0 0 10px #797300;
+}
+
+@keyframes borderGlow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+  }
+
+  to {
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.8);
+  }
+}
+
+.cyber-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff9d);
+  animation: cyberscan 3s linear infinite;
+}
+
+@keyframes cyberscan {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@font-face {
+  font-family: "NeueStance";
+  src:
+    url("/fonts/NeueStance-Bold.ttf") format("truetype"),
+    url("/fonts/NeueStance-Regular.ttf") format("truetype"),
+    url("/fonts/NeueStance-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atmospheric";
+  src:
+    url("/fonts/Atmospheric.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jura";
+  src:
+    url("/fonts/Jura-Regular.ttf") format("truetype"),
+    url("/fonts/Jura-Bold.ttf") format("truetype"),
+    url("/fonts/Jura-Light.ttf") format("truetype"),
+    url("/fonts/Jura-Medium.ttf") format("truetype"),
+    url("/fonts/Jura-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.glitch {
+  color: #fdf500;
+  position: relative;
+  display: inline-block;
+  animation: glitch 5s 5s infinite;
+}
+.glitch::before{
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: -5px 0 #111;
+  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -5px 0 #111;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes glitch {
+  1% { transform: rotateX(10deg) skewX(90deg); }
+  2% { transform: rotateX(0deg) skewX(0deg); }
+}
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+.glow {
+  text-shadow: 0 0 1000px #fdf500;
+  color: transparent;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to{
+    transform: translate(0px, 2%);
+  }
+}
+
+@keyframes scanline-move {
+  from { transform: translateY(0); }
+  to { transform: translateY(4%); }
+}
+
+@keyframes noise-1 {
+  0% { clip-path: inset(10% 0 80% 0); }
+  50% { clip-path: inset(40% 0 50% 0); }
+  100% { clip-path: inset(80% 0 10% 0); }
+}
+
+@keyframes noise-2 {
+  0% { clip-path: inset(20% 0 70% 0); }
+  50% { clip-path: inset(50% 0 40% 0); }
+  100% { clip-path: inset(70% 0 20% 0); }
+}
+
+@keyframes glitch-2 {
+  1% { transform: rotateX(10deg) skewX(70deg); }
+  2% { transform: rotateX(0deg) skewX(0deg); }
 }
