@@ -82,70 +82,35 @@ body {
   }
 }
 
-/* --- NeueStance Family --- */
 @font-face {
   font-family: "NeueStance";
-  src: url("/fonts/NeueStance-Regular.ttf") format("truetype");
-  font-weight: 400;
-  /* Regular */
+  src:
+    url("/fonts/NeueStance-Bold.ttf") format("truetype"),
+    url("/fonts/NeueStance-Regular.ttf") format("truetype"),
+    url("/fonts/NeueStance-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "NeueStance";
-  src: url("/fonts/NeueStance-Bold.ttf") format("truetype");
-  font-weight: 700;
-  /* Bold */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NeueStance";
-  src: url("../../public/fonts/NeueStance-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  /* SemiBold */
-  font-style: italic;
-}
-
-/* --- Atmospheric --- */
 @font-face {
   font-family: "Atmospheric";
-  src: url("../../public/fonts/Atmospheric.ttf") format("truetype");
-  font-weight: 400;
+  src:
+    url("/fonts/Atmospheric.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
-/* --- Jura Family --- */
 @font-face {
   font-family: "Jura";
-  src: url("../../public/fonts/Jura-Light.ttf") format("truetype");
-  font-weight: 300;
+  src:
+    url("/fonts/Jura-Regular.ttf") format("truetype"),
+    url("/fonts/Jura-Bold.ttf") format("truetype"),
+    url("/fonts/Jura-Light.ttf") format("truetype"),
+    url("/fonts/Jura-Medium.ttf") format("truetype"),
+    url("/fonts/Jura-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-@font-face {
-  font-family: "Jura";
-  src: url("../../public/fonts/Jura-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Jura";
-  src: url("../../public/fonts/Jura-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Jura";
-  src: url("../../public/fonts/Jura-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Jura";
-  src: url("../../public/fonts/Jura-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-
 
 
 .glitch {
@@ -154,8 +119,7 @@ body {
   display: inline-block;
   animation: glitch 5s 5s infinite;
 }
-
-.glitch::before {
+.glitch::before{
   content: attr(data-text);
   position: absolute;
   left: -2px;
@@ -166,7 +130,6 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
 .glitch::after {
   content: attr(data-text);
   position: absolute;
@@ -180,13 +143,8 @@ body {
 }
 
 @keyframes glitch {
-  1% {
-    transform: rotateX(10deg) skewX(90deg);
-  }
-
-  2% {
-    transform: rotateX(0deg) skewX(0deg);
-  }
+  1% { transform: rotateX(10deg) skewX(90deg); }
+  2% { transform: rotateX(0deg) skewX(0deg); }
 }
 
 .scanlines {
@@ -201,10 +159,12 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: repeating-linear-gradient(to bottom,
-      transparent 0%,
-      rgba(255, 255, 255, 0.05) .5%,
-      transparent 1%);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
   animation: fudge 7s ease-in-out alternate infinite;
 }
 
@@ -219,56 +179,29 @@ body {
   from {
     transform: translate(0px, 0px);
   }
-
-  to {
+  to{
     transform: translate(0px, 2%);
   }
 }
 
 @keyframes scanline-move {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(4%);
-  }
+  from { transform: translateY(0); }
+  to { transform: translateY(4%); }
 }
 
 @keyframes noise-1 {
-  0% {
-    clip-path: inset(10% 0 80% 0);
-  }
-
-  50% {
-    clip-path: inset(40% 0 50% 0);
-  }
-
-  100% {
-    clip-path: inset(80% 0 10% 0);
-  }
+  0% { clip-path: inset(10% 0 80% 0); }
+  50% { clip-path: inset(40% 0 50% 0); }
+  100% { clip-path: inset(80% 0 10% 0); }
 }
 
 @keyframes noise-2 {
-  0% {
-    clip-path: inset(20% 0 70% 0);
-  }
-
-  50% {
-    clip-path: inset(50% 0 40% 0);
-  }
-
-  100% {
-    clip-path: inset(70% 0 20% 0);
-  }
+  0% { clip-path: inset(20% 0 70% 0); }
+  50% { clip-path: inset(50% 0 40% 0); }
+  100% { clip-path: inset(70% 0 20% 0); }
 }
 
 @keyframes glitch-2 {
-  1% {
-    transform: rotateX(10deg) skewX(70deg);
-  }
-
-  2% {
-    transform: rotateX(0deg) skewX(0deg);
-  }
+  1% { transform: rotateX(10deg) skewX(70deg); }
+  2% { transform: rotateX(0deg) skewX(0deg); }
 }
