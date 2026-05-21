@@ -41,29 +41,7 @@ export default function Navbar() {
                         </div>
                     ))}
                 </div>
-                {/* <div className="flex items-center px-6 py-4 text-sm font-medium bg-[#0a0a0f] text-white hover:bg-[#fdf500] hover:text-black transition-all duration-300">
-                    <Link href="/quest">QUEST</Link>
-                </div>
-                <div className="flex items-center px-6 py-4 text-sm font-medium bg-[#0a0a0f] text-black hover:bg-[#fdf500] hover:text-black transition-all duration-300 slanted-buy">
-                    <Link href="#">CONTACT ME</Link>
-                </div> */}
             </div>
-            {/* <style jsx>{`
-                .slanted-navbar {
-                    position: relative
-                    clip-path: polygon(0% 0%, 0% 0%, 95% 100%, 5% 100%);
-                }
-
-                .slanted-nav {
-                    position: relative;
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 80%);
-                }
-                .slanted-buy {
-                    clip-path: polygon(0% 0%, 90% 0%, 100% 25%, 100% 100%, 0% 100%);
-                    background: #fdf500;
-                    margin-left: -1px;
-                }`}
-            </style> */}
         </nav>
     );
 }
