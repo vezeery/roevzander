@@ -1,6 +1,7 @@
 'use client';
 
 import {
+    Brain,
     EnvelopeOpen,
     FilmSlate,
     GameController,
@@ -8,8 +9,9 @@ import {
     Globe,
     InstagramLogo,
     LinkedinLogo,
+    Palette,
     SteamLogo,
-    TwitterLogo,
+    WhatsappLogoIcon
 } from '@phosphor-icons/react';
 
 import Image from 'next/image';
@@ -18,14 +20,14 @@ import Navbar from '../components/navbar';
 const developerProfiles = [
     {
         name: 'GitHub',
-        username: '@yourgithub',
-        link: 'https://github.com',
+        username: '@vezeery / Naufalih Muzakki Sujono',
+        link: 'https://github.com/vezeery',
         icon: GithubLogo,
     },
     {
         name: 'LinkedIn',
-        username: 'Your Name',
-        link: 'https://linkedin.com',
+        username: 'Naufalih Muzakki Sujono',
+        link: 'http://www.linkedin.com/in/naufalih-muzakki-sujono-747370326',
         icon: LinkedinLogo,
     },
     {
@@ -36,64 +38,95 @@ const developerProfiles = [
     },
 ];
 
+const skills = [
+    {
+        name: 'Next.js',
+        logo: '/svg/nextjs.svg',
+    },
+    {
+        name: 'Laravel',
+        logo: '/svg/laravel.svg',
+    },
+    {
+        name: 'Tailwind CSS',
+        logo: '/svg/tailwind.svg',
+    },
+        {
+        name: 'React',
+        logo: '/svg/react.svg',
+    },
+            {
+        name: 'PHP',
+        logo: '/svg/php.svg',
+    },
+    {
+        name: 'Machine Learning',
+        icon: Brain,
+    },
+    {
+        name: 'UI/UX',
+        icon: Palette,
+    },
+    {
+        name: 'Gaming',
+        icon: GameController,
+    },
+];
+
 const socialProfiles = [
     {
         name: 'Instagram',
-        username: '@yourinstagram',
-        link: 'https://instagram.com',
+        username: '@naufalih_ms',
+        link: 'https://www.instagram.com/naufalih_ms?igsh=MWJwa2tnNGJienUwaw==',
         icon: InstagramLogo,
     },
     {
-        name: 'Twitter / X',
-        username: '@yourtwitter',
-        link: 'https://twitter.com',
-        icon: TwitterLogo,
+        name: 'Whatsapp',
+        username: '082117779637',
+        link: 'https://wa.me/6282117779637',
+        icon: WhatsappLogoIcon,
     },
 ];
 
 const funProfiles = [
     {
         name: 'Steam',
-        username: 'Your Steam',
-        link: 'https://steamcommunity.com',
+        username: 'Roev',
+        link: 'https://steamcommunity.com/profiles/76561199067722316/',
         icon: SteamLogo,
     },
     {
         name: 'Letterboxd',
-        username: '@yourletterboxd',
-        link: 'https://letterboxd.com',
+        username: 'Roeveze',
+        link: 'https://letterboxd.com/Roeveze/',
         icon: FilmSlate,
     },
     {
         name: 'Xbox',
-        username: 'Your Xbox ID',
-        link: 'https://xbox.com',
+        username: 'RoevZander97',
+        link: 'https://www.xbox.com/id-ID/play/user/RoevZander97',
         icon: GameController,
     },
 ];
 
+
+
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-slate-950">
+        <div className="min-h-screen bg-[radial-gradient(circle,#797300_1px,transparent_1px)] bg-[size:48px_48px]">
             <Navbar />
 
             <div className="relative flex items-center justify-center px-4 py-16 overflow-hidden">
 
                 {/* Background Blur */}
-                <div className="absolute top-0 left-0 rounded-full w-72 h-72 bg-blue-500/10 blur-3xl"></div>
-                <div className="absolute bottom-0 right-0 rounded-full w-72 h-72 bg-purple-500/10 blur-3xl"></div>
-
-                <div className="relative z-10 w-full max-w-6xl">
-
+                <div className=""></div>
+                <div className="relative z-10 w-full max-w-7xl">
                     <div className="grid gap-6 lg:grid-cols-3">
-
                         {/* LEFT SIDE */}
                         <div className="lg:col-span-1">
                             <div className="sticky p-8 border shadow-2xl bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow">
-
                                 {/* Profile */}
                                 <div className="flex flex-col items-center text-center">
-
                                     <div className="relative w-40 h-40 mb-6 overflow-hidden border-2 shadow-xl rounded-3xl  border-[#fdf500]">
                                         <Image
                                             src="/picture/picture.jpg"
@@ -109,10 +142,7 @@ export default function ContactPage() {
                                     </h1>
 
                                     <p className="mb-4 text-slate-400">
-                                        Front-End Developer & UI/UX Designer
-                                    </p>
-                                    <p className="mb-4 text-slate-400">
-                                        Full Stack Developer
+                                        Front-End Developer, UI/UX Designer, Fullstack Developer
                                     </p>
 
                                     {/* Status */}
@@ -132,26 +162,37 @@ export default function ContactPage() {
                                     </p>
                                 </div>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap justify-center gap-2 mt-8">
-                                    {[
-                                        'Next.js',
-                                        'Laravel',
-                                        'Tailwind',
-                                        'Machine Learning',
-                                        'UI/UX',
-                                        'Gaming',
-                                    ].map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="px-3 py-1 text-sm border rounded-full bg-slate-800 text-slate-300 border-slate-700"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
+                                <div className="flex flex-wrap justify-start gap-3 mt-8">
+                                    {skills.map((skill) => {
+                                        const Icon = skill.icon;
+                                        return (
+                                            <div
+                                                key={skill.name}
+                                                className="flex items-center gap-2 px-4 py-2 transition-all duration-300 border rounded-full card-logo"
+                                            >
+                                                {skill.logo && (
+                                                    <Image
+                                                        src={skill.logo}
+                                                        alt={skill.name}
+                                                        width={16}
+                                                        height={16}
+                                                        className="object-contain bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] invert"
+                                                    />
+                                                )}
+                                                {Icon && (
+                                                    <Icon
+                                                        size={16}
+                                                        weight="fill"
+                                                        className="bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] text-white"
+                                                    />
+                                                )}
+                                                <span className="text-sm font-medium text-[#fdf500]">
+                                                    {skill.name}
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-
-                                {/* Email */}
                                 <div className="p-4 mt-8 border rounded-2xl bg-slate-800/60 border-slate-700">
                                     <div className="flex items-center gap-3 mb-2">
                                         <EnvelopeOpen
@@ -166,10 +207,10 @@ export default function ContactPage() {
                                     </div>
 
                                     <a
-                                        href="mailto:your.email@example.com"
-                                        className="font-medium text-white transition hover:text-slate-300"
+                                        href="mailto:naufalihmuzakkisujono97@gmail.com"
+                                        className="font-medium text-white transition hover:text-slate-300 font-['Jura']"
                                     >
-                                        your.email@example.com
+                                        naufalihmuzakkisujono97@gmail.com
                                     </a>
                                 </div>
 
@@ -197,7 +238,6 @@ export default function ContactPage() {
                                 </p>
                             </div>
 
-                            {/* Developer Profiles */}
                             <div className="p-8 border shadow-xl bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow">
                                 <h2 className="mb-6 text-2xl font-bold text-white">
                                     Developer Profiles
@@ -213,10 +253,10 @@ export default function ContactPage() {
                                                 href={profile.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-5 transition-all border group rounded-2xl bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800"
+                                                className="flex items-center justify-between p-5 transition-all border group rounded-2xl bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow"
                                             >
                                                 <div className="flex items-center gap-4">
-                                                    <div className="p-3 rounded-xl bg-slate-700">
+                                                    <div className="p-3 rounded-sm bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300]">
                                                         <Icon
                                                             size={24}
                                                             weight="fill"
@@ -224,7 +264,7 @@ export default function ContactPage() {
                                                         />
                                                     </div>
 
-                                                    <div>
+                                                    <div className="font-['Jura']">
                                                         <p className="font-semibold text-white">
                                                             {profile.name}
                                                         </p>
@@ -260,10 +300,10 @@ export default function ContactPage() {
                                                 href={profile.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-5 transition-all border group rounded-2xl bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800"
+                                                className="flex items-center justify-between p-5 transition-all border group rounded-2xl bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow"
                                             >
                                                 <div className="flex items-center gap-4">
-                                                    <div className="p-3 rounded-xl bg-slate-700">
+                                                    <div className="p-3 rounded-sm bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300]">
                                                         <Icon
                                                             size={24}
                                                             weight="fill"
@@ -271,7 +311,7 @@ export default function ContactPage() {
                                                         />
                                                     </div>
 
-                                                    <div>
+                                                    <div className="font-['Jura']">
                                                         <p className="font-semibold text-white">
                                                             {profile.name}
                                                         </p>
@@ -307,10 +347,10 @@ export default function ContactPage() {
                                                 href={profile.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-5 transition-all border group rounded-2xl bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800"
+                                                className="flex items-center justify-between p-5 transition-all border group rounded-2xl bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow"
                                             >
                                                 <div className="flex items-center gap-4">
-                                                    <div className="p-3 rounded-xl bg-slate-700">
+                                                    <div className="p-3 rounded-sm bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300]">
                                                         <Icon
                                                             size={24}
                                                             weight="fill"
@@ -318,7 +358,7 @@ export default function ContactPage() {
                                                         />
                                                     </div>
 
-                                                    <div>
+                                                    <div className="font-['Jura']">
                                                         <p className="font-semibold text-white">
                                                             {profile.name}
                                                         </p>

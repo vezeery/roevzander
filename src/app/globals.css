@@ -46,6 +46,12 @@ body {
   box-shadow: 0 0 10px #797300;
 }
 
+.card-logo {
+  background-color: #0a0a0a;
+  border: 1px solid #fdf500;
+  backdrop-filter: blur(10px);
+}
+
 @keyframes borderGlow {
   from {
     box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
