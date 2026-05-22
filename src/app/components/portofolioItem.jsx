@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function PortfolioItem() {
+export default function PortofolioItem() {
   return (
     <div className="group w-full max-w-5xl mx-auto mt-8 overflow-hidden rounded-xl border border-[#797300]/30 bg-primary/10 transition-allhover:border-[#fdf500] hover:shadow-xlhover:shadow-[#fdf500]/10">
       <Link

@@ -1,6 +1,6 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import PortfolioItem from "../components/portofolioitem";
+import PortofolioItem from "../components/portofolioitem";
 import "../globals.css";
 
 
@@ -9,7 +9,7 @@ export default function Portofolio() {
         <div>
             <Navbar />
             <div className="px-4 py-16 md:px-8">
-                <PortfolioItem />
+                <PortofolioItem />
             </div>
             <Footer />
         </div>

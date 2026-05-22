@@ -40,10 +40,10 @@ export default function Container() {
                         </p>
                         <div className="grid items-start grid-cols-1 gap-4 mt-8 md:grid-cols-4">
                             <button className="flex col-span-1 outline-2 bg-[#fdf500] text-black max-w-fit px-6 py-4 hover:bg-[#fdf500] hover:text-black">
-                                CONTACT
+                                <a href="/contact">CONTACT</a>
                             </button>
                             <button className="flex col-span-3 outline-2 border-[#fdf500] text-[#fdf500] max-w-fit px-6 py-4 hover:bg-[#fdf500] hover:text-black">
-                                PORTFOLIO
+                                <a href="/portofolio">PORTOFOLIO</a>
                             </button>
                         </div>
 

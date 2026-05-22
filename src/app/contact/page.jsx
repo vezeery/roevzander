@@ -118,14 +118,11 @@ export default function ContactPage() {
 
             <div className="relative flex items-center justify-center px-4 py-16 overflow-hidden">
 
-                {/* Background Blur */}
                 <div className=""></div>
                 <div className="relative z-10 w-full max-w-7xl">
                     <div className="grid gap-6 lg:grid-cols-3">
-                        {/* LEFT SIDE */}
                         <div className="lg:col-span-1">
                             <div className="sticky p-8 border shadow-2xl bg-primary bg-opacity-10 border-primary border-opacity-10 border-[#797300] hover:border-opacity-100 card-yellow">
-                                {/* Profile */}
                                 <div className="flex flex-col items-center text-center">
                                     <div className="relative w-40 h-40 mb-6 overflow-hidden border-2 shadow-xl rounded-3xl  border-[#fdf500]">
                                         <Image
@@ -136,11 +133,9 @@ export default function ContactPage() {
                                             priority
                                         />
                                     </div>
-
                                     <h1 className="mb-2 text-xl font-bold text-white">
                                         Naufalih Muzakki Sujono
                                     </h1>
-
                                     <p className="mb-4 text-slate-400">
                                         Front-End Developer, UI/UX Designer, Fullstack Developer
                                     </p>
