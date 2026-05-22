@@ -153,7 +153,7 @@ export default function ContactPage() {
                                     <p className="leading-relaxed text-slate-400 font-['Jura']">
                                         Passionate developer focused on creating
                                         modern web experiences, scalable applications,
-                                        and clean UI design.
+                                        and clean UI design also User Experience.
                                     </p>
                                 </div>
 
